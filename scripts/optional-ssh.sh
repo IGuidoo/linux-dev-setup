@@ -8,6 +8,6 @@ echo "🔐 Installing and configuring SSH client..."
 sudo apt install -y openssh-client
 
 # Run SSH setup
-source ../configs/ssh-setup.sh
+source ./configs/ssh-setup.sh
 
 echo "🔐 SSH client setup complete!"

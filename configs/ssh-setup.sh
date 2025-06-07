@@ -28,13 +28,12 @@ chmod 644 ~/.ssh/id_ed25519.pub
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
-# Create SSH config file with common settings
+# Create SSH config file with Linux-compatible settings
 if [ ! -f ~/.ssh/config ]; then
     cat > ~/.ssh/config << EOF
 # Default settings for all hosts
 Host *
     AddKeysToAgent yes
-    UseKeychain yes
     IdentityFile ~/.ssh/id_ed25519
     ServerAliveInterval 60
     ServerAliveCountMax 3

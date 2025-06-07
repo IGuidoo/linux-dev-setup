@@ -21,6 +21,7 @@ sudo apt install -y \
     gnupg \
     lsb-release \
     unzip \
+    eza \
     htop \
     tree \
     openssh-client
@@ -49,7 +50,7 @@ echo "📦 Installing global npm packages..."
 npm install -g pnpm turbo
 
 # Configure Git
-source ./configs/.gitconfig-template
+source ./configs/.gitconfig-template.sh
 
 # Set up SSH
 # source ./configs/ssh-setup.sh
