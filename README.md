@@ -2,11 +2,30 @@
 
 A modular bash script collection to quickly set up a development environment on a fresh Linux system.
 
-## 🚀 Quick Start
+## 🚀 Fresh System Quick Start
+
+### One-liner Bootstrap (Recommended for fresh systems)
+```bash
+curl -fsSL https://raw.githubusercontent.com/IGuidoo/linux-dev-setup/main/bootstrap.sh | bash
+```
+
+### Manual Bootstrap Steps
+```bash
+# 1. Install git first
+sudo apt update && sudo apt install -y git
+
+# 2. Clone and run
+git clone https://github.com/IGuidoo/linux-dev-setup.git
+cd linux-dev-setup
+chmod +x setup-dev-environment.sh scripts/*.sh
+./setup-dev-environment.sh
+```
+
+## 🔧 Already Have Git?
 
 ```bash
-git clone <your-repo-url>
-cd dev-environment-setup
+git clone https://github.com/IGuidoo/linux-dev-setup.git
+cd linux-dev-setup
 chmod +x setup-dev-environment.sh scripts/*.sh
 ./setup-dev-environment.sh
 ```
@@ -14,15 +33,18 @@ chmod +x setup-dev-environment.sh scripts/*.sh
 ## 📁 Structure
 
 ```
-dev-environment-setup/
+linux-dev-setup/
+├── bootstrap.sh                # Bootstrap script for fresh systems
 ├── setup-dev-environment.sh    # Main setup script
 ├── scripts/
 │   ├── optional-docker.sh      # Docker installation
+│   ├── optional-ssh.sh         # Ssh installation
 │   ├── optional-vscode.sh      # VS Code installation
 │   └── extras.sh              # Additional dev tools
 └── configs/
     ├── .gitconfig-template    # Git configuration
-    └── aliases.sh            # Useful shell aliases
+    └── aliases.sh             # Useful shell aliases
+    └── ssh-setup.sh           # Ssh configuration
 ```
 
 ## 🔧 What's Included
